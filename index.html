@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+    <head>
+        <title>LIT280</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body {
+            width: 60%;
+            color: white;
+            background-color: black;
+            max-width: 1000px;
+            min-width: 700px;
+            margin: auto;
+        }
+        .button {
+            border: 1px solid white;
+            color: white;
+            background-color: black;
+            padding: 15px 5px;
+            text-decoration: none;
+            float: left;
+            width: 33%;
+            height: 7vh;
+        }
+        .center {
+            margin: auto;
+            padding: 50px;
+        }
+        .hiddendiv {
+            max-height: 0;
+            float: left;
+            overflow: hidden;
+        }
+        .hiddenscene {
+            max-height: 0;
+            float: left;
+            overflow: hidden;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .hideablediv {
+            overflow: hidden;
+        }
+        .scene {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+        <script>
+        
+        var S1_1 = "You were both diligent and serious about your education. Graduating the School of Law, you used your Father's connections to secure a well-paying job.'";
+        var S1_2 = "You were Ambitious about your studies, but still found time for being both lively and agreeable.  You were well liked, and known as '<em>le phenix de la famille</em>'.";
+        var S1_3 = "You neglected your studies, and opted for pursuing debauchery and personal pleasure.  Both you and your brother dropped out.  While your brother merely was considered a failure, you soon perished, being poisoned by the mercury you were using to treat your venereal disease.<br/><br/><h1>END</h1>";
+        
+        var S2_1 = "You found no time to be spending frivolously.  Your work met exacting standards, and respect followed.";
+        var S2_2 = "While you were both diligent and fastidious, you were also well liked.  A bout of carousing was never too harmful, and you were sure to keep everything, as the French would say, <em>Il faut que jeunesse se passe</em>.";
+        var S2_3 = "Your indulgent social life knew no boundaries.  While your work was always above-board, rumors often persist about your affairs.  You've had a few close calls, often due to nights spent with an official's wife.";
+        
+        var S3_1 = "You progressed through your years, full of purpose, full of purpose.  You were regarded as efficient and ruthless, but cold, and unsociable.<br/><br/> Time came and went, promotions were had.  In your mid-fifties, you were set upon by a mysterious illness, the likes of which no doctor or physic could identify.  Try as they might, all that could be done was ease your suffering.<br/><br/> Having never found the time to build a personal social circle, you faced this time alone.  Despite the indignity of your end, you faced it well, knowing, your life was full of purpose.<br/><br/> In your final hours, rather than suffer alone in excruciating pain, you requested summery termination to your living duties.  Your personal physician obliged with a quadruple dose of morphine.<br/><br/><h1>END</h1>"
+        var S3_2 = "Your attitude took you to a new level of social standing.  Your salary was quite large, and you took to spending plenty of time in your new community.  It was said, that you never abused your power, and your public persona took on an air of dignity and aloofness."
+        var S3_3 = "Things seemed to have been going well.  Unknown to you, in your carelessness, you wrong-footed a man of prominence in one of your rulings.  It doesn't help that it was generally believed that you had been 'attending' his wife. <br /><br /> Truth or not, even years later people spoke in hushed tones about the 'Disappearance of Ivan Ilyich'<br/><br/><h1>END</h1>"
+        
+        var S4_1 = "You relations with Fedorovna (who, was initially taken aback) proceeded quite well.  Your seriousness and dedication came across well, and everyone agreed, she was quite correct to be the wife of the Magistrate.<br/><br/> The marriage was, perhaps, an understated affair, but soon enough, Fedorovna was with child.  You spared no expense at this, and hired all the best to prepare your estate.<br/><br/> During the renovation, you were struck, quite by accident, across the middle with a beam.  The contractor was most apologetic, and you took pity on him.<br/><br/> Within the week, you became violently ill, something inexplicable.  All manner of physic was applied, to no avail.  You died in tremendous pain, though you bore with it, for the sake of your loving wife, and future child.<br/><br/><h1>END</h1>"
+        var S4_2 = "Though your intentions were not exactly to be married, you both became infatuated.  You decided, <em>Why not?</em>, after all she was both from good stock, and good looking.<br/><br/> The marriage was naturally, a splendid concourse, and the niceties of married life were not few."
+        var S4_3 = "The woman was a difficult challenge.  You knew her once, then no more, for she soon wised your intentions.  During one encounter, a passing constable observed your attempts to talk your way into her home.<br/><br/> You were mistakenly shot while being asked to leave.  Although the constable was eventually charged for the accidental assassination of the Magistrate, that fact does not make you any less dead.<br/><br/><h1>END</h1>"
+        
+        var S5_1 = "Your desires for respect and clout were laughed down by your associates.  Eventually, you were demoted to a clerk.<br/><br/> As it became obvious there was no way you could support a family, you grew to be completely estranged from your wife.<br/><br/> The toll this took crushed your mind and soul, leaving no respite other than a bridge and a cold river.  It would be years before the authorities found Ivan Ilyich encased in ice, which was cut out and used as a vaudeville attraction with the express permission of one Praskovya Fedorovna.<br/><br/><h1>END</h1>"
+        var S5_2 = "That summer would be remembered as the hardest of your life thus far.  You found yourself lucky, as a chance promotion of an acquittance provided an opening sizeable enough to provide comfortably for your family.<br/><br/> For a while, your life picked up.  You acquired a new home, and set to renovate it in a way both pleasing to yourself, and your wife. <br/><br/> This led to an accident that had irrevocable consequences.<br/><br/> During the renovations, you suffered a small concussion of the side.  Although minor at first, you found the pain in this area to be growing, rather than subsiding.  To make matters worse, neither the doctors or physics could determine a just cause or course of treatment.<br/><br/> Your suffered for years in growing pain and alienation from your friends and family.<br/><br/> In the end, even the comfort of a favored servant and the news of our daughters marriage could not alleviate your suffering or spirits.<br/><br/> Your death was a shock to no-one, and your wife lamented your loss of income almost in equal measure to her personal loss.<br/><br/> You were no more; in your final moments, you considered how it all could have gone so wrong. Your choices had been correct, or at least, the most correct, and yet, you had been punished with a cruel and untimely death.<br/><br/><h1>END</h1>"
+        var S5_3 = "You make your decision, hastily repacking your things.  Taking special attention to keep this from your wife, you slipped out in the dead of night, only to be met by your brother-in-law. Though from the country, he was not as dense as he seemed.<br/><br/> Your wife and children lamented your disappearance, waiting for news of a lone Ivan Ilyich that never arrived.<br/><br/><h1>END</h1>"
+
+            function showdiv(divID) {
+                var target = document.getElementById(divID);
+                target.style.maxHeight = (target.scrollHeight * 2.5) + "px";
+                target.style.transition = "max-height 0.8s ease-in";
+                target.style.height = "auto";
+            }
+
+            function hidediv(divID) {
+                var target = document.getElementById(divID);
+                target.style.maxHeight = "0px";
+                target.style.transition = "max-height 0.8s ease-out";
+            }
+
+        </script>
+    <body>
+
+        <h1 style="text-align: center;">You are Ivan Ilyich</h1>
+
+         <p class="center">
+            Here, you will have the chance to live out a brief version of Tolstoy's "<em>The Death of Ivan Ilyich</em>."<br />
+            <br />
+            Your choices cannot be undone, so choose carefully.  If you wish to restart, you may refresh the page.
+        </p>
+
+        <div class="scene" id="S1">
+            <p>
+                You are Ivan Ilyich.  You come from a family where your father has held a prominent position at various prominent institutions.<br />
+                <br />
+                You will soon enroll in the School of Law, along with your brothers.<br />
+                <br />
+                How will you attend to your time there?
+            </p>
+
+            <div class="hideablediv" id="S1_B">
+                <button class="button" onclick="showdiv('S1_1');hidediv('S1_B');showdiv('S2');">Foramlly and without Distractions</button>
+                <button class="button" onclick="showdiv('S1_2');hidediv('S1_B');showdiv('S2');">Ambitiously, but still Lively and Social</button>
+                <button class="button" onclick="showdiv('S1_3');hidediv('S1_B');">Wildly Social, Amorous, without regard for the Lessons.</button>
+            </div><br />
+
+            <div class="hiddendiv" id="S1_1"><script>document.write(S1_1);</script></div>
+            <div class="hiddendiv" id="S1_2"><script>document.write(S1_2);</script></div>
+            <div class="hiddendiv" id="S1_3"><script>document.write(S1_3);</script></div>
+
+        </div>        
+
+        <div class="hiddenscene" id="S2">
+            <p> <br />
+                Now exiting the School of Law, and having received money from your Father, you purchase the equipment for your trade.<br />
+                <br />
+                All equipment was, naturally, purchased from the best shops, and of the foremost fashion.<br/>
+                <br />
+                Finally, it is time to begin your Career.  How do you Conduct yourself?
+            </p>
+
+            <div class="hideablediv" id="S2_B">
+                <button class="button" onclick="showdiv('S2_1');hidediv('S2_B');showdiv('S3');">Strictly and without Leniency or Diversion of any sort</button>
+                <button class="button" onclick="showdiv('S2_2');hidediv('S2_B');showdiv('S3');">Keep to your work diligently, but maintain a satisfying, seperate Social Life</button>
+                <button class="button" onclick="showdiv('S2_3');hidediv('S2_B');showdiv('S3');">Indulge yourself to your whims, persuing pleasure, wheather working or at leisure.</button>
+            </div><br />
+
+            <div class="hiddendiv" id="S2_1"><script>document.write(S2_1);</script></div>
+            <div class="hiddendiv" id="S2_2"><script>document.write(S2_2);</script></div>
+            <div class="hiddendiv" id="S2_3"><script>document.write(S2_3);</script></div>
+
+        </div>
+
+        <div class="hiddenscene" id="S3">
+            <p> <br />
+                Five years pass in such a manner.  After that time, the 'New and Reformed' judicial systems were introduced.  New men were needed.<br />
+                <br />
+                You were one such man.  Accepting the post of Examining Magistrate, you set forth to a new province.<br/>
+                <br />
+                Here, you wield considerably more power over those under your charge, and in greater numbers.  With the masses at the disposal of your powers, how will you attend to your affairs?
+            </p>
+
+            <div class="hideablediv" id="S3_B">
+                <button class="button" onclick="showdiv('S3_1');hidediv('S3_B');">Strictly, with duty and purpose, at the expense of the public's good will.'</button>
+                <button class="button" onclick="showdiv('S3_2');hidediv('S3_B');showdiv('S4');">Kindly and fairly, while still observing all necessary formalities.</button>
+                <button class="button" onclick="showdiv('S3_3');hidediv('S3_B');">Laissez faire, completing your responsibilities, but poorly, preferring the pursuit of personal power.</button>
+            </div><br />
+
+            <div class="hiddendiv" id="S3_1"><script>document.write(S3_1);</script></div>
+            <div class="hiddendiv" id="S3_2"><script>document.write(S3_2);</script></div>
+            <div class="hiddendiv" id="S3_3"><script>document.write(S3_3);</script></div>
+
+        </div>
+
+        <div class="hiddenscene" id="S4">
+            <p> <br />
+                After two years in kind, your fortune turned.  You had the providence to meet a one Praskovya Fedorovna Mikhel, the most attractive, clever, and brilliant girl among all of those in your circles.<br />
+                <br />
+                Perusing relations seems to be the inevitable consequence of this encounter.<br/>
+                <br />
+                That being the case, with what manner will your peruse her?
+            </p>
+
+            <div class="hideablediv" id="S4_B">
+                <button class="button" onclick="showdiv('S4_1');hidediv('S4_B');">A serious courting, keeping propriety and correctness.</button>
+                <button class="button" onclick="showdiv('S4_2');hidediv('S4_B');showdiv('S5');">Establish light and playful relations, keeping an openness for something more.</button>
+                <button class="button" onclick="showdiv('S4_3');hidediv('S4_B');">Peruse her only for to consummate the relationship, then nothing more.</button>
+            </div><br />
+
+            <div class="hiddendiv" id="S4_1"><script>document.write(S4_1);</script></div>
+            <div class="hiddendiv" id="S4_2"><script>document.write(S4_2);</script></div>
+            <div class="hiddendiv" id="S4_3"><script>document.write(S4_3);</script></div>
+
+        </div>
+
+        <div class="hiddenscene" id="S5">
+            <p> <br />
+                This all came to an end with Fedorovna's pregnancy.  She soon became jealous of even the smallest things, and disturbed your easygoing and pleasurable life (your <em>de gaieté de coeur</em>, as you thought of it).<br />
+                <br />
+                As time passed, more children came, and along with them, more annoyances and inconveniences.  Your solace was work, but that too, seemed to forsake you.<br/>
+                <br />
+                When money grew short, your family withdrew to your brother-in-law’s home in the country.  You eventually decide, your life cannot continue this way.
+            </p>
+
+            <div class="hideablediv" id="S5_B">
+                <button class="button" onclick="showdiv('S5_1');hidediv('S5_B');">Search for a direct promotion, demanding your fields respect.</button>
+                <button class="button" onclick="showdiv('S5_2');hidediv('S5_B');">Buckle down, and search for any position that could resuscitate your career and marriage.</button>
+                <button class="button" onclick="showdiv('S5_3');hidediv('S5_B');">Abandon your family and its inconveniences, returning to your position alone.</button>
+            </div><br />
+
+            <div class="hiddendiv" id="S5_1"><script>document.write(S5_1);</script></div>
+            <div class="hiddendiv" id="S5_2"><script>document.write(S5_2);</script></div>
+            <div class="hiddendiv" id="S5_3"><script>document.write(S5_3);</script></div>
+
+        </div>
+
+
+    </body>
+</html>
+<!-- The truth is, the game was rigged from the start. -->
